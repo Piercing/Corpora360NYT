@@ -54,14 +54,102 @@
 		31D6E0D022CFD0B0001D99EA /* Corpora360NYT */ = {
 			isa = PBXGroup;
 			children = (
-				31D6E0D122CFD0B0001D99EA /* AppDelegate.swift */,
+				31D6E0ED22D00485001D99EA /* Supporting Files */,
+				31D6E0EC22D0047B001D99EA /* Models */,
+				31D6E0EB22D00473001D99EA /* Services */,
+				31D6E0EA22CFFAF4001D99EA /* Protocols */,
+				31D6E0E922CFFAEB001D99EA /* Managers */,
+				31D6E0E822CFFADE001D99EA /* Resources */,
+				31D6E0E722CFFAD3001D99EA /* Extensions */,
+				31D6E0E622CFFAB5001D99EA /* Views */,
+				31D6E0E522CFFA9A001D99EA /* Configuration */,
+				31D6E0E322CFF9C6001D99EA /* Aplication Delegate */,
+				31D6E0E422CFFA1E001D99EA /* ViewControllers */,
 				31D6E0D322CFD0B0001D99EA /* ViewController.swift */,
 				31D6E0D522CFD0B0001D99EA /* Main.storyboard */,
-				31D6E0D822CFD0B2001D99EA /* Assets.xcassets */,
 				31D6E0DA22CFD0B2001D99EA /* LaunchScreen.storyboard */,
-				31D6E0DD22CFD0B2001D99EA /* Info.plist */,
 			);
 			path = Corpora360NYT;
+			sourceTree = "<group>";
+		};
+		31D6E0E322CFF9C6001D99EA /* Aplication Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				31D6E0D122CFD0B0001D99EA /* AppDelegate.swift */,
+			);
+			path = "Aplication Delegate";
+			sourceTree = "<group>";
+		};
+		31D6E0E422CFFA1E001D99EA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31D6E0E522CFFA9A001D99EA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		31D6E0E622CFFAB5001D99EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31D6E0E722CFFAD3001D99EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31D6E0E822CFFADE001D99EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				31D6E0D822CFD0B2001D99EA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		31D6E0E922CFFAEB001D99EA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		31D6E0EA22CFFAF4001D99EA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		31D6E0EB22D00473001D99EA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		31D6E0EC22D0047B001D99EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31D6E0ED22D00485001D99EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31D6E0DD22CFD0B2001D99EA /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z273P8K3M7;
-				INFOPLIST_FILE = Corpora360NYT/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Corpora360NYT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z273P8K3M7;
-				INFOPLIST_FILE = Corpora360NYT/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Corpora360NYT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
