@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var settingsTableView: UITableView!
+    @IBOutlet weak var showArticles: UIButton!
     
     var delegate: SettingsViewControllerDelegate?
     
@@ -39,7 +40,15 @@ class SettingsViewController: UIViewController {
     
     private func setupTableView() {
         settingsTableView.separatorInset = UIEdgeInsets.zero
+        settingsTableView.allowsMultipleSelection = true
     }
+    
+    // MARK: - IBOutets Actions
+    
+    @IBAction func showArticlesAction(_ sender: Any) {
+        
+    }
+    
 }
 
 
@@ -135,13 +144,19 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             }
             
         case .sourceType:
-            let sourceNotation = UserDefaults.sourceNotation()
+            let sourceNotation = UserDefaults.sourceNotationFB()
             guard indexPath.row != sourceNotation.rawValue else { return }
             
             if let newSourceNotation = SourceNotation(rawValue: indexPath.row) {
                 
                 // Update User Defaults
-                UserDefaults.setSourceNotation(sourceNotation: newSourceNotation)
+                UserDefaults.setSourceNotationFB(sourceNotation: newSourceNotation)
+                
+                // Notifiy Delegate
+                delegate?.controllerDidChangeSharedSource(controller: self)
+                
+                // Update User Defaults
+                UserDefaults.setSourceNotationTW(sourceNotation: newSourceNotation)
                 
                 // Notifiy Delegate
                 delegate?.controllerDidChangeSharedSource(controller: self)

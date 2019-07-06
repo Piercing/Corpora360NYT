@@ -48,10 +48,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7Em-XP-8XY"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CPD-wM-yFs"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-RS-cbS">
                                 <rect key="frame" x="20" y="669" width="374" height="72"/>
@@ -64,6 +60,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="showArticlesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UqR-K7-eEf"/>
                                     <segue destination="gqj-N9-suP" kind="show" identifier="articlesSegue" id="260-b6-vs9"/>
                                 </connections>
                             </button>
@@ -83,6 +80,7 @@
                     <navigationItem key="navigationItem" id="HmJ-Zm-s0R"/>
                     <connections>
                         <outlet property="settingsTableView" destination="tC5-pq-Xew" id="etb-XV-cbS"/>
+                        <outlet property="showArticles" destination="Md4-RS-cbS" id="ycT-aS-suL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

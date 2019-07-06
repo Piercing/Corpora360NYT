@@ -31,4 +31,5 @@ class SettingsTableViewCell: UITableViewCell {
         mainLabelCell.text = viewModel.text
         accessoryType = viewModel.accessoryType
     }
+    
 }
