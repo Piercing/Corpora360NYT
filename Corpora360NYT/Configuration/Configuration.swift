@@ -11,15 +11,9 @@ import Foundation
 
 struct Defaults {
     
-    // Instance variables
     static var articleType: String = ""
     static var sourceType : String = ""
     static var periodType : Int    = 1
-    
-    enum SourceTypeSocialRed: String {
-        case facebook = "facebook"
-        case twitter  = "twitter"
-    }
     
 }
 
@@ -58,38 +52,41 @@ struct API {
         
     }
     
-    static let APIKey  = "hg7IA4Gfku3AaaVwrA5hSEgfpF0AqAoi"
-    static let Section = "all-sections"
-    static let BaseURL = URL(string: "http://api.nytimes.com/svc/mostpopular/v2/")!
-    static let ArticleApiURL = "/\(getArticleType)"  + "/\(Section)" + "/\(getPeriodType)" + ".json?api-key=\(APIKey)"
+    static let APIKey    = "hg7IA4Gfku3AaaVwrA5hSEgfpF0AqAoi"
+    static let Section   = "all-sections"
+    static let Facebook  = "facebook"
+    static let Twitter   = "twitter"
+    static let AllSocial = "facebook;twitter"
+    static let BaseURL   = URL(string: "http://api.nytimes.com/svc/mostpopular/v2/")!
+    static var ArtApiURL = ""
     
     static var AuthenticatedBaseURL: URL {
-        return BaseURL.appendingPathComponent(ArticleApiURL)
+        return BaseURL.appendingPathComponent(getSocilaPlatform(socilaPlatform: API.getSourceType))
+    }
+    
+    static func getSocilaPlatform(socilaPlatform: String) -> String {
+        
+        switch Defaults.sourceType {
+            
+        case "facebook": API.ArtApiURL =
+            "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.Facebook)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+        return API.ArtApiURL
+            
+        case "twitter": API.ArtApiURL =
+            "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.Twitter)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+        return API.ArtApiURL
+            
+        case "facebook;twitter": API.ArtApiURL =
+            "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.AllSocial)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+        return API.ArtApiURL
+            
+        default:
+            API.ArtApiURL = "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+            return API.ArtApiURL
+        }
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-// API URLs
-//    enum Periods: Int {
-//        case period01 = 1
-//        case period07 = 7
-//        case period30 = 30
-//        case unknown
-//
-//        init(value: Int) {
-//            if let period = Periods(rawValue: value) { self = period }
-//            else { self = .unknown }
-//        }
-//    }
 
 
 //    static let EmailedBaseURL = "http://api.nytimes.com/svc/mostpopular/v2/mostemailed/"
