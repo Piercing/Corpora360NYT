@@ -93,13 +93,13 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch section {
         case .articleType:
-            guard let articleNotation = ArticleNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path")  }
+            guard let articleNotation = ArticleNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path") }
             viewModel = SettingsViewArticleViewModel(articleNotation: articleNotation)
         case .periodType:
-            guard let periodNotation = PeriodNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path")  }
+            guard let periodNotation = PeriodNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path") }
             viewModel = SettingsViewPeriodViewModel(periodNotation: periodNotation)
         case .sourceType:
-            guard let sourceNotation = SourceNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path")  }
+            guard let sourceNotation = SourceNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path") }
             viewModel =  SettingsViewSourceViewModel(sourceNotation: sourceNotation)
         }
         
@@ -144,26 +144,38 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             }
             
         case .sourceType:
-            let sourceNotation = UserDefaults.sourceNotationFB()
+            
+            if let cell = tableView.cellForRow(at: indexPath) {
+                if cell.isSelected {
+                    cell.accessoryType = .checkmark
+                }
+            }
+            let sourceNotation = UserDefaults.sourceNotation()
             guard indexPath.row != sourceNotation.rawValue else { return }
             
             if let newSourceNotation = SourceNotation(rawValue: indexPath.row) {
                 
                 // Update User Defaults
-                UserDefaults.setSourceNotationFB(sourceNotation: newSourceNotation)
+                UserDefaults.setSourceNotation(sourceNotation: newSourceNotation)
                 
                 // Notifiy Delegate
                 delegate?.controllerDidChangeSharedSource(controller: self)
                 
-                // Update User Defaults
-                UserDefaults.setSourceNotationTW(sourceNotation: newSourceNotation)
-                
-                // Notifiy Delegate
-                delegate?.controllerDidChangeSharedSource(controller: self)
             }
         }
         
         tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
     }
     
+    private func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+   
+        
+        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
+            cell.accessoryType = .none
+        }
+        
+        if let sr = tableView.indexPathsForSelectedRows {
+            print("didDeselectRowAtIndexPath selected rows:\(sr)")
+        }
+    }
 }

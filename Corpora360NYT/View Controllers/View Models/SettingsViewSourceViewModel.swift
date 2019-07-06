@@ -24,7 +24,7 @@ struct SettingsViewSourceViewModel {
     }
     
     var accessoryType: UITableViewCell.AccessoryType {
-        if UserDefaults.sourceNotationFB() == sourceNotation && UserDefaults.sourceNotationTW() == sourceNotation{
+        if UserDefaults.sourceNotation() == sourceNotation {
             return .checkmark
         } else {
             return .none

@@ -29,11 +29,9 @@ enum SourceNotation: Int {
 }
 
 struct UserDefaultsKey {
-    static let articleNotation   = "articleNotation"
-    static let periodNotation    = "periodNotation"
-    static let sourceNotationFB  = "sourceNotationFB"
-    static let sourceNotationTW  = "sourceNotationTW"
-
+    static let articleNotation = "articleNotation"
+    static let periodNotation  = "periodNotation"
+    static let sourceNotation  = "sourceNotation"
 }
 
 extension UserDefaults {
@@ -60,26 +58,15 @@ extension UserDefaults {
         UserDefaults.standard.set(periodNotation.rawValue, forKey: UserDefaultsKey.periodNotation)
     }
     
-    // MARK: - Source Notation Facebook
+    // MARK: - Source Notation
     
-    static func sourceNotationFB() -> SourceNotation {
-        let storeValue = UserDefaults.standard.integer(forKey: UserDefaultsKey.sourceNotationFB)
+    static func sourceNotation() -> SourceNotation {
+        let storeValue = UserDefaults.standard.integer(forKey: UserDefaultsKey.sourceNotation)
         return SourceNotation(rawValue: storeValue) ?? SourceNotation.facebook
     }
     
-    static func setSourceNotationFB(sourceNotation: SourceNotation) {
-        UserDefaults.standard.set(sourceNotation.rawValue, forKey: UserDefaultsKey.sourceNotationFB)
-    }
-    
-    // MARK: - Source Notation Twitter
-    
-    static func sourceNotationTW() -> SourceNotation {
-        let storeValue = UserDefaults.standard.integer(forKey: UserDefaultsKey.sourceNotationTW)
-        return SourceNotation(rawValue: storeValue) ?? SourceNotation.twitter
-    }
-    
-    static func setSourceNotationTW(sourceNotation: SourceNotation) {
-        UserDefaults.standard.set(sourceNotation.rawValue, forKey: UserDefaultsKey.sourceNotationTW)
+    static func setSourceNotation(sourceNotation: SourceNotation) {
+        UserDefaults.standard.set(sourceNotation.rawValue, forKey: UserDefaultsKey.sourceNotation)
     }
     
 }
