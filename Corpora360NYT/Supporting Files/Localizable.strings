@@ -1,0 +1,43 @@
+/* 
+ Loclizable.strings
+ Corpora360NYT
+ 
+ Created by Juan Carlos Merlos Albarracín on 06/07/2019.
+ Copyright © 2019 devspain. All rights reserved.
+ */
+
+// API response keys
+"Url"           = "url";
+"Title"         = "title";
+"Media"         = "media";
+"ByLine"        = "byline"; // author
+"Section"       = "section";
+"Results"       = "results";
+"Abstract"      = "abstract";
+"ShareType"     = "share_type";
+"PublishedDate" = "published_date";
+"MediaMetaData" = "media-metadata";
+
+// StoryBoards IDs
+"ArticleCell"        = "ArticleCell";
+"SettingsCell"       = "SettingsCell";
+"ArticlesSegue"      = "articlesSegue";
+"articleDetailSegue" = "articleDetailSegue";
+
+// Default constants
+"Settings"              = "Settings";
+"OkButtonTitle"         = "OK";
+"MostSharedArticles"    = "NY Times Most Shared";
+"MostViewedArticles"    = "NY Times Most Viewed";
+"MosteMailedArticles"   = "NY Times Most Emailed";
+"NetworkErrorMessage"   = "Network error occurred!. Please check your internet and try again.";
+"NoNetworkErrorMessgae" = "Internet is not availble. please check your internet setting and try again.";
+"APIParseErrorMessage"  = "An error occurred while processing response!. Please check your internet setting and try again later";
+
+
+
+
+
+
+
+
