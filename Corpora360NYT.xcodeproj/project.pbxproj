@@ -12,7 +12,6 @@
 		3135993022D0E5AF0029F872 /* SettingsViewPeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135992F22D0E5AF0029F872 /* SettingsViewPeriodViewModel.swift */; };
 		3135993222D0E9BA0029F872 /* SettingsViewSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135993122D0E9BA0029F872 /* SettingsViewSourceViewModel.swift */; };
 		3135993422D10D300029F872 /* SourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135993322D10D300029F872 /* SourceModel.swift */; };
-		3135993622D10E0C0029F872 /* SourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3135993522D10E0C0029F872 /* SourceViewModel.swift */; };
 		31D6E0D222CFD0B0001D99EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D6E0D122CFD0B0001D99EA /* AppDelegate.swift */; };
 		31D6E0D722CFD0B0001D99EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31D6E0D522CFD0B0001D99EA /* Main.storyboard */; };
 		31D6E0D922CFD0B2001D99EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D6E0D822CFD0B2001D99EA /* Assets.xcassets */; };
@@ -31,7 +30,6 @@
 		3135992F22D0E5AF0029F872 /* SettingsViewPeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewPeriodViewModel.swift; sourceTree = "<group>"; };
 		3135993122D0E9BA0029F872 /* SettingsViewSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewSourceViewModel.swift; sourceTree = "<group>"; };
 		3135993322D10D300029F872 /* SourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceModel.swift; sourceTree = "<group>"; };
-		3135993522D10E0C0029F872 /* SourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewModel.swift; sourceTree = "<group>"; };
 		31D6E0CE22CFD0B0001D99EA /* Corpora360NYT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Corpora360NYT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D6E0D122CFD0B0001D99EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31D6E0D622CFD0B0001D99EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 				3135992D22D0E3500029F872 /* SettingsViewArticleViewModel.swift */,
 				3135992F22D0E5AF0029F872 /* SettingsViewPeriodViewModel.swift */,
 				3135993122D0E9BA0029F872 /* SettingsViewSourceViewModel.swift */,
-				3135993522D10E0C0029F872 /* SourceViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -298,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31D6E0F222D01BB5001D99EA /* StringExt.swift in Sources */,
-				3135993622D10E0C0029F872 /* SourceViewModel.swift in Sources */,
 				31D6E0D222CFD0B0001D99EA /* AppDelegate.swift in Sources */,
 				3135993022D0E5AF0029F872 /* SettingsViewPeriodViewModel.swift in Sources */,
 				31D6E0F622D0214B001D99EA /* Configuration.swift in Sources */,

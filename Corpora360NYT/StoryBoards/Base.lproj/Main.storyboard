@@ -48,6 +48,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zPe-Ac-KZR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5vY-fp-YhB"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-RS-cbS">
                                 <rect key="frame" x="20" y="669" width="374" height="72"/>
