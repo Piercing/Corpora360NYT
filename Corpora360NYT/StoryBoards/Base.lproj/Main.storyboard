@@ -18,15 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tC5-pq-Xew">
-                                <rect key="frame" x="0.0" y="88" width="414" height="551"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tC5-pq-Xew">
+                                <rect key="frame" x="0.0" y="88" width="414" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.8227101794500904" green="0.83298579217049962" blue="0.84115006899470601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsCell" id="NGU-1v-IYI" customClass="SettingsTableViewCell" customModule="Corpora360NYT" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NGU-1v-IYI" id="2W3-wM-o6b">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp3-MU-aV9">
@@ -73,7 +74,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tC5-pq-Xew" secondAttribute="trailing" id="F5c-qF-phl"/>
                             <constraint firstItem="Md4-RS-cbS" firstAttribute="centerX" secondItem="tC5-pq-Xew" secondAttribute="centerX" id="NCS-nA-gb5"/>
-                            <constraint firstItem="Md4-RS-cbS" firstAttribute="top" secondItem="tC5-pq-Xew" secondAttribute="bottom" constant="30" id="T2K-HE-H01"/>
+                            <constraint firstItem="Md4-RS-cbS" firstAttribute="top" secondItem="tC5-pq-Xew" secondAttribute="bottom" constant="10" id="T2K-HE-H01"/>
                             <constraint firstItem="Md4-RS-cbS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bhY-gJ-8wa"/>
                             <constraint firstItem="tC5-pq-Xew" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ss9-vk-kC6"/>
                             <constraint firstItem="tC5-pq-Xew" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y1C-4d-fBc"/>

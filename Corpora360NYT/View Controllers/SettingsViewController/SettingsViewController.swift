@@ -21,6 +21,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var settingsTableView: UITableView!
     @IBOutlet weak var showArticles: UIButton!
     
+    // Table view Header
+    let headerReuseId = "TableHeaderViewReuseId"
+    
+    // Delegate
     var delegate: SettingsViewControllerDelegate?
     
     // MARK: - View Life Cycle
@@ -41,6 +45,7 @@ class SettingsViewController: UIViewController {
     private func setupTableView() {
         settingsTableView.separatorInset = UIEdgeInsets.zero
         settingsTableView.allowsMultipleSelection = true
+        showArticles.layer.cornerRadius = 8
     }
     
     // MARK: - IBOutets Actions
@@ -76,6 +81,35 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == 0 { return "Article type" }
+        else if section == 1 { return "Publication period" }
+        else { return  "Social platform" }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerFrame = tableView.frame
+        
+        let title = UILabel()
+        title.frame =  CGRect(x: 7, y: 10, width: headerFrame.size.width - 20, height: 20)
+        title.font = UIFont(name: "Avenir-Medium", size: 20)
+        title.text = self.tableView(tableView, titleForHeaderInSection: section)
+        title.textColor = .black
+        
+        let headerView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: headerFrame.size.width, height: headerFrame.size.height))
+        headerView.backgroundColor = #colorLiteral(red: 0.8847216368, green: 0.8794626594, blue: 0.8887643218, alpha: 1)
+        headerView.addSubview(title)
+        
+        return headerView
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -167,15 +201,4 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
     }
     
-    private func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-   
-        
-        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
-            cell.accessoryType = .none
-        }
-        
-        if let sr = tableView.indexPathsForSelectedRows {
-            print("didDeselectRowAtIndexPath selected rows:\(sr)")
-        }
-    }
 }
