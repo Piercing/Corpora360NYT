@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tC5-pq-Xew">
-                                <rect key="frame" x="0.0" y="88" width="414" height="571"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="654"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.8227101794500904" green="0.83298579217049962" blue="0.84115006899470601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -55,10 +55,10 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-RS-cbS">
-                                <rect key="frame" x="20" y="669" width="374" height="72"/>
+                                <rect key="frame" x="20" y="762" width="374" height="80"/>
                                 <color key="backgroundColor" red="0.94263304299999995" green="0.51371042609999995" blue="0.14163304299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="Rir-ms-OfV"/>
+                                    <constraint firstAttribute="height" constant="80" id="FCu-8p-ccf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                 <state key="normal" title="Show Articles">
@@ -72,13 +72,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Md4-RS-cbS" secondAttribute="trailing" constant="20" id="55n-kl-227"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tC5-pq-Xew" secondAttribute="trailing" id="F5c-qF-phl"/>
-                            <constraint firstItem="Md4-RS-cbS" firstAttribute="centerX" secondItem="tC5-pq-Xew" secondAttribute="centerX" id="NCS-nA-gb5"/>
-                            <constraint firstItem="Md4-RS-cbS" firstAttribute="top" secondItem="tC5-pq-Xew" secondAttribute="bottom" constant="10" id="T2K-HE-H01"/>
-                            <constraint firstItem="Md4-RS-cbS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bhY-gJ-8wa"/>
+                            <constraint firstItem="Md4-RS-cbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ffc-gh-eaf"/>
+                            <constraint firstItem="Md4-RS-cbS" firstAttribute="top" secondItem="tC5-pq-Xew" secondAttribute="bottom" constant="20" id="TFa-tg-Ztn"/>
+                            <constraint firstItem="Md4-RS-cbS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="op3-lj-WP1"/>
                             <constraint firstItem="tC5-pq-Xew" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ss9-vk-kC6"/>
                             <constraint firstItem="tC5-pq-Xew" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y1C-4d-fBc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Md4-RS-cbS" secondAttribute="bottom" constant="121" id="z3z-s9-4fj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

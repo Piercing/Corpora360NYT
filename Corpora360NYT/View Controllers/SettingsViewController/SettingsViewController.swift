@@ -56,7 +56,6 @@ class SettingsViewController: UIViewController {
     
 }
 
-
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     
     private enum Section: Int {
@@ -178,12 +177,6 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             }
             
         case .sourceType:
-            
-            if let cell = tableView.cellForRow(at: indexPath) {
-                if cell.isSelected {
-                    cell.accessoryType = .checkmark
-                }
-            }
             let sourceNotation = UserDefaults.sourceNotation()
             guard indexPath.row != sourceNotation.rawValue else { return }
             
