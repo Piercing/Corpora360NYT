@@ -28,16 +28,16 @@ extension Articles: Parsable {
 }
 
 struct Article {
-    var name: String?
+    var title: String?
     var section: String?
     var imageUrl: String?
-    var publishedData: Date?
+    var publishedData: Date!
     var byLineString: String?
 
     init?(articleDictionary: Dictionary<String, Any>) {
         guard let _ = articleDictionary["title"] as? String else { return nil }
         
-        self.name = articleDictionary["Title".localize] as? String
+        self.title = articleDictionary["Title".localize] as? String
         self.byLineString = articleDictionary["ByLine".localize] as? String
         self.section = articleDictionary["Section".localize] as? String
         

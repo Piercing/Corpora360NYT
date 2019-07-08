@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Configuration/Configuration.swift"
+            timestampString = "584321144.999675"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "AuthenticatedBaseURL"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Configuration/Configuration.swift"
+            timestampString = "584321145.0000401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getSocilaPlatform(socilaPlatform:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Configuration/Configuration.swift"
+            timestampString = "584321145.000128"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "getSocilaPlatform(socilaPlatform:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Configuration/Configuration.swift"
+            timestampString = "584321145.000194"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "getSocilaPlatform(socilaPlatform:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Configuration/Configuration.swift"
+            timestampString = "584321145.000263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getSocilaPlatform(socilaPlatform:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Articles View/View Models/ArticleViewModel.swift"
+            timestampString = "584321145.000335"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getArticles(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Corpora360NYT.APIResult&lt;Corpora360NYT.Articles, Corpora360NYT.APIError&gt;) -&gt; () in Corpora360NYT.ArticleViewModel.getArticles(Swift.Optional&lt;(Corpora360NYT.APIResult&lt;Swift.Bool, Corpora360NYT.APIError&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/Articles%20View/View%20Models/ArticleViewModel.swift"
+                  timestampString = "584318112.9303679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Corpora360NYT.Article, Corpora360NYT.Article) -&gt; Swift.Bool in closure #1 () -&gt; () in closure #1 (Corpora360NYT.APIResult&lt;Corpora360NYT.Articles, Corpora360NYT.APIError&gt;) -&gt; () in Corpora360NYT.ArticleViewModel.getArticles(Swift.Optional&lt;(Corpora360NYT.APIResult&lt;Swift.Bool, Corpora360NYT.APIError&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/Articles%20View/View%20Models/ArticleViewModel.swift"
+                  timestampString = "584318112.933092"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Articles View/View Models/ArticleViewModel.swift"
+            timestampString = "584321145.00056"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getArticles(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/Articles View/View Models/ArticleViewModel.swift"
+            timestampString = "584321145.000613"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getArticles(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/API/JSONParser/DataParser.swift"
+            timestampString = "584318586.793067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ParserData"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Corpora360NYT.ParserData.__allocating_init() -&gt; Corpora360NYT.ParserData"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/API/JSONParser/DataParser.swift"
+                  timestampString = "584318112.948064"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Corpora360NYT.ParserData.init() -&gt; Corpora360NYT.ParserData"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/API/JSONParser/DataParser.swift"
+                  timestampString = "584318112.950407"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Corpora360NYT.ParserData.deinit"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/API/JSONParser/DataParser.swift"
+                  timestampString = "584318112.951803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Corpora360NYT.ParserData.__deallocating_deinit"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/API/JSONParser/DataParser.swift"
+                  timestampString = "584318112.953164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/API/JSONParser/DataParser.swift"
+            timestampString = "584318586.793322"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "parseData(data:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/API/JSONParser/DataParser.swift"
+            timestampString = "584318586.79339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "parseData(data:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/API/JSONParser/DataParser.swift"
+            timestampString = "584318586.793451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "parseData(data:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Corpora360NYT.ParserData.parseData&lt;A where A: Corpora360NYT.Parsable&gt;(data: Foundation.Data, completion: (Corpora360NYT.APIResult&lt;A, Corpora360NYT.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/API/JSONParser/DataParser.swift"
+                  timestampString = "584318112.9785171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1671">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Corpora360NYT.ParserData.parseData&lt;A where A: Corpora360NYT.Parsable&gt;(data: Foundation.Data, completion: (Corpora360NYT.APIResult&lt;A, Corpora360NYT.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Corpora360NYT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/V0014595/Desktop/Pruebas_Tecnicas/Corpora360/Corpora360NYT/Corpora360NYT/API/JSONParser/DataParser.swift"
+                  timestampString = "584318112.979848"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1720">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Corpora360NYT/API/JSONParser/DataParser.swift"
+            timestampString = "584318586.7935129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "parseData(data:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

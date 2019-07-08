@@ -28,7 +28,7 @@ enum APIError: Error {
 final class NetService: APIRequestHandler, APIServiceProtocol {
     
     static let netService = NetService()
-    let URL = API.AuthenticatedBaseURL.absoluteString
+    let URL = "https://api.nytimes.com/svc/mostpopular/v2/mostshared/all-sections/facebook;twitter/30.json?api-key=hg7IA4Gfku3AaaVwrA5hSEgfpF0AqAoi"
     var netTask: URLSessionTask?
     
     func getArticles(_ completion: @escaping ((APIResult<Articles, APIError>) -> Void)) {

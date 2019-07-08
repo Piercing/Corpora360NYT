@@ -21,7 +21,7 @@ class APIRequestService {
         
         let task = session.dataTask(with: apiRequest) { (data, response, error) in
             if let error = error {
-                completion(.failure(.networkError(string: "NetworkErrorMessage" + error.localizedDescription)))
+                completion(.failure(.networkError(string: "NetworkErrorMessage".localize + error.localizedDescription)))
                 return
             }
             

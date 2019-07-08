@@ -17,5 +17,15 @@ class Utils {
             return Date()
         }
         return date
+        
     }
+    
+    static func convertStringToDate(date:Date) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let newDate = dateFormatter.string(from: date)
+        return newDate
+        
+    }
+
 }

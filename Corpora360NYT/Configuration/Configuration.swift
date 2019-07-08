@@ -6,8 +6,7 @@
 //  Copyright © 2019 devspain. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 
 struct Defaults {
     
@@ -57,7 +56,7 @@ struct API {
     static let Facebook  = "facebook"
     static let Twitter   = "twitter"
     static let AllSocial = "facebook;twitter"
-    static let BaseURL   = URL(string: "http://api.nytimes.com/svc/mostpopular/v2/")!
+    static let BaseURL   = URL(string: "https://api.nytimes.com/svc/mostpopular/v2/mostviewed/")!
     static var ArtApiURL = ""
     
     static var AuthenticatedBaseURL: URL {
@@ -81,14 +80,23 @@ struct API {
         return API.ArtApiURL
             
         default:
-            API.ArtApiURL = "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
-            return API.ArtApiURL
+            API.ArtApiURL = "\(API.getSourceType)"  + "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+            print("URL API: \(API.ArtApiURL)")
+            return "https://api.nytimes.com/svc/mostpopular/v2/mostshared/all-sections/facebook;twitter/30.json?api-key=hg7IA4Gfku3AaaVwrA5hSEgfpF0AqAoi"
         }
+        
+        print("URL FINAL: \(API.AuthenticatedBaseURL)")
+        
     }
+    
+    // Color constants
+    static  let PrimaryTextColor = UIColor.black
+    static  let SecondryTextColor = UIColor.darkGray
+    static let PrimaryBackGroundColor = UIColor.lightGray
     
 }
 
-
+// // https://api.nytimes.com/svc/mostpopular/v2/mostshared/all-sections/facebook;twitter/30.json?api-key=hg7IA4Gfku3AaaVwrA5hSEgfpF0AqAoi
 //    static let EmailedBaseURL = "http://api.nytimes.com/svc/mostpopular/v2/mostemailed/"
 //    static let ViewedBaseURL  = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/"
 //    static let SharedBaseURL  = "http://api.nytimes.com/svc/mostpopular/v2/mostshared/"

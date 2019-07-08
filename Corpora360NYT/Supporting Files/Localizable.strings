@@ -24,13 +24,15 @@
 "articleDetailSegue" = "articleDetailSegue";
 
 // Default constants
-"Settings"              = "Settings";
-"OkButtonTitle"         = "OK";
-"MostSharedArticles"    = "NY Times Most Shared";
-"MostViewedArticles"    = "NY Times Most Viewed";
-"MosteMailedArticles"   = "NY Times Most Emailed";
-"NetworkErrorMessage"   = "Network error occurred!. Please check your internet and try again.";
-"APIParseErrorMessage"  = "An error occurred while processing response!. Please check your internet setting and try again later";
+"Articles"               = "Articles";
+"Settings"               = "Settings";
+"OkButtonTitle"          = "OK";
+"ArticlesTitleTableView" = "NY Times Articles";
+"MostSharedArticles"     = "NY Times Most Shared";
+"MostViewedArticles"     = "NY Times Most Viewed";
+"MosteMailedArticles"    = "NY Times Most Emailed";
+"NetworkErrorMessage"    = "Network error occurred!. Please check your internet and try again.";
+"APIParseErrorMessage"   = "An error occurred while processing response!. Please check your internet setting and try again later";
 
 
 
