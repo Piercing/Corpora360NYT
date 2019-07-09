@@ -226,19 +226,19 @@
 		31D6E0D022CFD0B0001D99EA /* Corpora360NYT */ = {
 			isa = PBXGroup;
 			children = (
-				313DD1CA22D3C7E1007607B1 /* Utils */,
-				31D6E0E322CFF9C6001D99EA /* Aplication Delegate */,
-				31D6E0E522CFFA9A001D99EA /* Configuration */,
-				31D6E0E722CFFAD3001D99EA /* Extensions */,
 				31D6E0E922CFFAEB001D99EA /* API */,
-				31D6E0EC22D0047B001D99EA /* Models */,
-				31D6E0E822CFFADE001D99EA /* Resources */,
-				31D6E0F022D017B7001D99EA /* StoryBoards */,
-				31D6E0ED22D00485001D99EA /* Supporting Files */,
+				31D6E0E322CFF9C6001D99EA /* Aplication Delegate */,
 				318BD77122D4B9E400754EDC /* Article Web Kit */,
 				313DD1CE22D3D0D7007607B1 /* Articles View */,
-				31D6E0E422CFFA1E001D99EA /* Settings View */,
+				31D6E0E522CFFA9A001D99EA /* Configuration */,
 				313DD1CF22D3D102007607B1 /* Detail Article View */,
+				31D6E0E722CFFAD3001D99EA /* Extensions */,
+				31D6E0EC22D0047B001D99EA /* Models */,
+				31D6E0E822CFFADE001D99EA /* Resources */,
+				31D6E0E422CFFA1E001D99EA /* Settings View */,
+				31D6E0F022D017B7001D99EA /* StoryBoards */,
+				31D6E0ED22D00485001D99EA /* Supporting Files */,
+				313DD1CA22D3C7E1007607B1 /* Utils */,
 			);
 			path = Corpora360NYT;
 			sourceTree = "<group>";
