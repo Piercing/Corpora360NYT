@@ -10,6 +10,7 @@ import UIKit
 
 class GenericDataSource<T>: NSObject {
     var data: DynamicValue<[T]> = DynamicValue([])
+    
 }
 
 
@@ -17,10 +18,12 @@ class ArticleDataSource: GenericDataSource<ArticleCellViewModel>, UITableViewDat
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.value.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,7 +36,7 @@ class ArticleDataSource: GenericDataSource<ArticleCellViewModel>, UITableViewDat
         let articleCellVM = self.data.value[indexPath.row]
         cell.articleCellVM = articleCellVM
         return cell
+        
     }
-    
     
 }

@@ -20,6 +20,7 @@ struct SettingsViewArticleViewModel {
         case .mostShared: return "Most Shared"
         case .mostViewed: return "Most Viewed"
         }
+        
     }
     
     var accessoryType: UITableViewCell.AccessoryType {
@@ -28,7 +29,9 @@ struct SettingsViewArticleViewModel {
         } else {
             return .none
         }
+        
     }
+    
 }
 
 extension SettingsViewArticleViewModel: SettingsRepresentable {

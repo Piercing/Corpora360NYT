@@ -24,6 +24,7 @@ struct ArticleViewModel {
         guard let service = serviceProtocolAPI else {
             completion?(APIResult.failure(APIError.customizedError(string: "Not service available")))
             return
+            
         }
         
         service.getArticles() { result in
@@ -39,16 +40,17 @@ struct ArticleViewModel {
                     break
                     
                 case .failure(let error):
-                    print("Error when parser \(error)")
+                    print("Parse error \(error)")
                     completion?(APIResult.failure(error))
                     break
                 }
             }
         }
+        
     }
     
     func  getArticleCellViewModel(articles:[Article]) -> [ArticleCellViewModel] {
-        var articalCellVMList:[ArticleCellViewModel] = []
+        var articalCellVMList = [ArticleCellViewModel]()
         for article in articles {
             let articleCellViewModel = ArticleCellViewModel(article: article)
             articalCellVMList.append(articleCellViewModel)
@@ -56,4 +58,5 @@ struct ArticleViewModel {
         
         return articalCellVMList
     }
+    
 }

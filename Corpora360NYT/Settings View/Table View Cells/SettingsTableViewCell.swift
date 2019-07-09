@@ -23,6 +23,7 @@ class SettingsTableViewCell: UITableViewCell {
         
         // Configure Cell
         selectionStyle = .none
+        
     }
     
     // MARK: - Configuration

@@ -22,6 +22,7 @@ struct SettingsViewPeriodViewModel {
         case .period07: return "Seven Days"
         case .period30: return "Thirty Days"
         }
+        
     }
     
     var accessoryType: UITableViewCell.AccessoryType {
@@ -31,6 +32,7 @@ struct SettingsViewPeriodViewModel {
             return .none
         }
     }
+    
 }
 
 extension SettingsViewPeriodViewModel: SettingsRepresentable {

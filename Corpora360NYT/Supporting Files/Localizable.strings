@@ -24,15 +24,18 @@
 "articleDetailSegue" = "articleDetailSegue";
 
 // Default constants
+"Facebook"               = "Facebook";
+"MostViewed"             = "mostviewed";
+"Seven"                  = "7";
 "Articles"               = "Articles";
 "Settings"               = "Settings";
-"OkButtonTitle"          = "OK";
+"OkButton"               = "OK";
 "ArticlesTitleTableView" = "NY Times Articles";
 "MostSharedArticles"     = "NY Times Most Shared";
 "MostViewedArticles"     = "NY Times Most Viewed";
 "MosteMailedArticles"    = "NY Times Most Emailed";
-"NetworkErrorMessage"    = "Network error occurred!. Please check your internet and try again.";
-"APIParseErrorMessage"   = "An error occurred while processing response!. Please check your internet setting and try again later";
+"NetworkErrorMessage"    = "Network error occurred!.";
+"APIParseErrorMessage"   = "An error occurred while processing response!";
 
 
 

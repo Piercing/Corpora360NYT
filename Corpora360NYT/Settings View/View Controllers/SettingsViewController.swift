@@ -8,12 +8,6 @@
 
 import UIKit
 
-protocol SettingsViewControllerDelegate {
-    func controllerDidChangeArticleType(controller : SettingsViewController)
-    func controllerDidChangeRecentPeriod(controller: SettingsViewController)
-    func controllerDidChangeSharedSource(controller: SettingsViewController)
-}
-
 class SettingsViewController: UIViewController {
     
     // MARK: - Properties
@@ -24,28 +18,23 @@ class SettingsViewController: UIViewController {
     // Table view Header
     let headerReuseId = "TableHeaderViewReuseId"
     
-    // Delegate
-    var delegate: SettingsViewControllerDelegate?
-    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Settings".localize
-        setupView()
+        setupTableView()
+        
     }
     
     // MARK: - View Methods
     
-    private func setupView() {
-        setupTableView()
-    }
-    
     private func setupTableView() {
         settingsTableView.separatorInset = UIEdgeInsets.zero
         settingsTableView.allowsMultipleSelection = true
-        showArticles.layer.cornerRadius = 8
+        showArticles.layer.cornerRadius = 12
+        
     }
     
     // MARK: - IBOutets Actions
@@ -80,10 +69,12 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.count
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -114,6 +105,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = Section(rawValue: section) else { fatalError("Unexpected Section") }
         return section.numberOfRows
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -134,6 +126,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         case .sourceType:
             guard let sourceNotation = SourceNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path") }
             viewModel =  SettingsViewSourceViewModel(sourceNotation: sourceNotation)
+            
         }
         
         if let viewModel = viewModel {
@@ -141,6 +134,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return cell
+        
     }
     
     // MARK: - Table View Delegate Methods
@@ -156,24 +150,18 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             guard indexPath.row != articleNotation.rawValue else { return }
             
             if let newArticleNotation = ArticleNotation(rawValue: indexPath.row) {
-                
                 // Update User Defaults
                 UserDefaults.setArticleNotation(articleNotation: newArticleNotation)
+                API.getSourceType = UserDefaults.articleNotation().articleNotation
                 
-                // Notifiy Delegate
-                delegate?.controllerDidChangeArticleType(controller: self)
             }
         case .periodType:
             let periodNotation = UserDefaults.periodNotation()
             guard indexPath.row != periodNotation.rawValue else { return }
             
             if let newPeriodNotation = PeriodNotation(rawValue: indexPath.row) {
-                
                 // Update User Defaults
                 UserDefaults.setPeriodNotation(periodNotation: newPeriodNotation)
-                
-                // Notifiy Delegate
-                delegate?.controllerDidChangeRecentPeriod(controller: self)
             }
             
         case .sourceType:
@@ -181,12 +169,8 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             guard indexPath.row != sourceNotation.rawValue else { return }
             
             if let newSourceNotation = SourceNotation(rawValue: indexPath.row) {
-                
                 // Update User Defaults
                 UserDefaults.setSourceNotation(sourceNotation: newSourceNotation)
-                
-                // Notifiy Delegate
-                delegate?.controllerDidChangeSharedSource(controller: self)
                 
             }
         }

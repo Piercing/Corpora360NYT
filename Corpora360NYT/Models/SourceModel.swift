@@ -10,4 +10,5 @@ import Foundation
 
 struct SourceModel {
     var socialPlatform: String
+    
 }

@@ -10,6 +10,7 @@ import Foundation
 
 protocol Parsable {
     static func parseObject(dictionary: [String: AnyObject]) -> APIResult<Self, APIError>
+    
 }
 
 final class ParserData {
@@ -35,5 +36,7 @@ final class ParserData {
         } catch  {
             print("Parse error")
         }
+        
     }
+    
 }

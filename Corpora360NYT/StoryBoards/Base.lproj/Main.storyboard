@@ -115,7 +115,9 @@
                                                     <rect key="frame" x="20" y="8" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="49C-ZJ-L3J"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="XFu-pI-slb"/>
                                                         <constraint firstAttribute="width" constant="100" id="sst-gK-bzq"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="yRW-58-aV1"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="DH3-Dv-TEO">
@@ -204,7 +206,7 @@
                         <viewLayoutGuide key="safeArea" id="ZRT-Oo-mEK"/>
                     </view>
                     <connections>
-                        <outlet property="activiyIndicatorImageArticle" destination="bsb-Ks-fuK" id="SSg-zP-6YH"/>
+                        <outlet property="activiyIndicatorArticles" destination="bsb-Ks-fuK" id="SSg-zP-6YH"/>
                         <outlet property="articlesTableView" destination="Htu-SN-3Nc" id="cl6-Tv-JRH"/>
                         <segue destination="H2R-fA-Mto" kind="show" identifier="articleDetailSegue" id="s5F-Xe-Kg4"/>
                     </connections>

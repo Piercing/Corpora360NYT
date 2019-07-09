@@ -8,44 +8,52 @@
 
 import UIKit
 
+
 struct Defaults {
     
     static var articleType: String = ""
+    static var periodType : String = ""
     static var sourceType : String = ""
-    static var periodType : Int    = 1
     
 }
 
 struct API {
     
-    static var getPeriodType: Int {
-        
-        get { return Defaults.periodType }
-        set (newPeriodType) {
-            if newPeriodType != getPeriodType {
-                Defaults.periodType = newPeriodType
-            }
-        }
-        
-    }
-    
     static var getArticleType: String {
-        
-        get { return Defaults.articleType }
+        get {
+            Defaults.articleType = UserDefaults.articleNotation().articleNotation
+            return Defaults.articleType
+        }
         set (newArticleType) {
-            if newArticleType != getArticleType {
+            if newArticleType != Defaults.articleType {
                 Defaults.articleType = newArticleType
             }
         }
         
     }
     
-    static var getSourceType: String {
+    static var getPeriodType: String {
+        get {
+            Defaults.periodType = UserDefaults.periodNotation().periodNotation
+            return Defaults.periodType
+        }
+        set (newPeriodType) {
+            if newPeriodType != Defaults.periodType {
+                Defaults.periodType = newPeriodType
+            }
+        }
         
-        get { return Defaults.sourceType }
+    }
+    
+    static var getSourceType: String {
+        get {
+            Defaults.sourceType = UserDefaults.sourceNotation().sourceNotation
+            return Defaults.sourceType
+        }
         set (newSourceType) {
-            if newSourceType != getSourceType {
+            if newSourceType != Defaults.sourceType {
                 Defaults.sourceType = newSourceType
+                
             }
         }
         
@@ -56,47 +64,33 @@ struct API {
     static let Facebook  = "facebook"
     static let Twitter   = "twitter"
     static let AllSocial = "facebook;twitter"
-    static let BaseURL   = URL(string: "https://api.nytimes.com/svc/mostpopular/v2/mostviewed/")!
+    static let BaseURL   = "https://api.nytimes.com/svc/mostpopular/v2"
     static var ArtApiURL = ""
     
-    static var AuthenticatedBaseURL: URL {
-        return BaseURL.appendingPathComponent(getSocilaPlatform(socilaPlatform: API.getSourceType))
-    }
-    
-    static func getSocilaPlatform(socilaPlatform: String) -> String {
-        
-        switch Defaults.sourceType {
+    static var finalURL: String  {
+        switch API.getSourceType {
             
-        case "facebook": API.ArtApiURL =
-            "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.Facebook)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
-        return API.ArtApiURL
+        case "facebook":
+            API.ArtApiURL = "/\(API.getArticleType)" + "/\(API.Section)" + "/\(API.Facebook)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+            print(API.getArticleType)
+            return API.BaseURL + API.ArtApiURL
             
-        case "twitter": API.ArtApiURL =
-            "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.Twitter)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
-        return API.ArtApiURL
+        case "twitter":
+            API.ArtApiURL = "/\(API.getArticleType)" + "/\(API.Section)" + "/\(API.Twitter)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+            return API.BaseURL + API.ArtApiURL
             
-        case "facebook;twitter": API.ArtApiURL =
-            "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.AllSocial)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
-        return API.ArtApiURL
+        case "facebook;twitter":
+            API.ArtApiURL = "/\(API.getArticleType)" + "/\(API.Section)" + "/\(API.AllSocial)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
+            return API.BaseURL + API.ArtApiURL
             
         default:
-            API.ArtApiURL = "\(API.getSourceType)"  + "/\(API.getArticleType)"  + "/\(API.Section)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
-            print("URL API: \(API.ArtApiURL)")
             return "https://api.nytimes.com/svc/mostpopular/v2/mostshared/all-sections/facebook;twitter/30.json?api-key=hg7IA4Gfku3AaaVwrA5hSEgfpF0AqAoi"
         }
-        
-        print("URL FINAL: \(API.AuthenticatedBaseURL)")
-        
     }
     
     // Color constants
-    static  let PrimaryTextColor = UIColor.black
-    static  let SecondryTextColor = UIColor.darkGray
+    static let PrimaryTextColor       = UIColor.black
+    static let SecondryTextColor      = UIColor.darkGray
     static let PrimaryBackGroundColor = UIColor.lightGray
     
 }
-
-// // https://api.nytimes.com/svc/mostpopular/v2/mostshared/all-sections/facebook;twitter/30.json?api-key=hg7IA4Gfku3AaaVwrA5hSEgfpF0AqAoi
-//    static let EmailedBaseURL = "http://api.nytimes.com/svc/mostpopular/v2/mostemailed/"
-//    static let ViewedBaseURL  = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/"
-//    static let SharedBaseURL  = "http://api.nytimes.com/svc/mostpopular/v2/mostshared/"

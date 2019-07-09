@@ -33,7 +33,7 @@ struct Article {
     var imageUrl: String?
     var publishedData: Date!
     var byLineString: String?
-
+    
     init?(articleDictionary: Dictionary<String, Any>) {
         guard let _ = articleDictionary["title"] as? String else { return nil }
         

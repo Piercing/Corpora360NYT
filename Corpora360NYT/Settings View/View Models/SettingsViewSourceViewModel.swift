@@ -21,6 +21,7 @@ struct SettingsViewSourceViewModel {
         case .facebook: return "Facebook"
         case .twitter : return "Twitter"
         }
+        
     }
     
     var accessoryType: UITableViewCell.AccessoryType {
@@ -30,6 +31,7 @@ struct SettingsViewSourceViewModel {
             return .none
         }
     }
+    
 }
 
 extension SettingsViewSourceViewModel: SettingsRepresentable {

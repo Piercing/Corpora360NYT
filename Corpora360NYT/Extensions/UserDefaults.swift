@@ -13,6 +13,15 @@ enum ArticleNotation: Int {
     case mostShared
     case mostViewed
     
+    var articleNotation: String {
+        switch self {
+        case .mostMailed: return "mostemailed"
+        case .mostShared: return "mostshared"
+        case .mostViewed: return "mostviewed"
+            
+        }
+    }
+    
 }
 
 enum PeriodNotation: Int {
@@ -20,11 +29,26 @@ enum PeriodNotation: Int {
     case period07
     case period30
     
+    var periodNotation: String {
+        switch self {
+        case .period01: return "1"
+        case .period07: return "7"
+        case .period30: return "30"
+        }
+    }
+    
 }
 
 enum SourceNotation: Int {
     case facebook
     case twitter
+    
+    var sourceNotation: String {
+        switch self {
+        case .facebook: return "facebook"
+        case .twitter : return "twitter"
+        }
+    }
     
 }
 

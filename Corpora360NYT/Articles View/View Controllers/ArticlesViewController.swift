@@ -8,16 +8,16 @@
 
 import UIKit
 
-let estimateRowHeght :CGFloat = 80.0
+let estimateRowHeght: CGFloat = 80.0
 
 class ArticlesViewController: UIViewController {
     
     // MARK: - Properties
     
     @IBOutlet weak var articlesTableView: UITableView!
-    @IBOutlet weak var activiyIndicatorImageArticle: UIActivityIndicatorView!
+    @IBOutlet weak var activiyIndicatorArticles: UIActivityIndicatorView!
     
-    var dataSource = ArticleDataSource()
+    var dataSource     = ArticleDataSource()
     let refreshControl = UIRefreshControl()
     
     lazy var viewModel: ArticleViewModel = {
@@ -29,7 +29,6 @@ class ArticlesViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        
         
     }
     
@@ -43,7 +42,7 @@ class ArticlesViewController: UIViewController {
         
         // UI
         self.title = "ArticlesTitleTableView".localize
-        self.activiyIndicatorImageArticle.stopAnimating()
+        self.activiyIndicatorArticles.stopAnimating()
         self.articlesTableView.rowHeight = UITableView.automaticDimension
         self.articlesTableView.estimatedRowHeight = estimateRowHeght
         
@@ -58,13 +57,13 @@ class ArticlesViewController: UIViewController {
         
     }
     
-   @objc func getArticle() {
+    @objc func getArticle() {
         
-        self.activiyIndicatorImageArticle?.startAnimating()
+        self.activiyIndicatorArticles?.startAnimating()
         self.viewModel.getArticles({[weak self] result in
             
-            self?.activiyIndicatorImageArticle?.stopAnimating()
-            self?.activiyIndicatorImageArticle?.removeFromSuperview()
+            self?.activiyIndicatorArticles?.stopAnimating()
+            self?.activiyIndicatorArticles?.removeFromSuperview()
             
             switch result{
             case .failure(let error):
@@ -74,20 +73,25 @@ class ArticlesViewController: UIViewController {
                 print("Sucess")
             }
         })
-    refreshControl.endRefreshing()
+        refreshControl.endRefreshing()
+        
     }
     
     // MARK:- UI Alert
     
     func showAlert(message:String) {
         
-        let alertView = UIAlertController(title: title,
-                                          message: message,
-                                          preferredStyle: .alert)
-        let action = UIAlertAction(title: "OkButtonTitle".localize, style: .default, handler: nil)
-        alertView.addAction(action)
-        self.present(alertView, animated: true, completion: nil)
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        
+        let when = DispatchTime.now() + 3
+        DispatchQueue.main.asyncAfter(deadline: when){
+            alert.dismiss(animated: true, completion: {
+                self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+            })
+        }
     }
+    
 }
 
 // MARK: - Extension
@@ -100,10 +104,11 @@ extension ArticlesViewController: UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "articleDetailSegue".localize {
-            let newsDetailVC = segue.destination as? ArticlesWebKitViewController
-//            newsDetailVC?.detailNews = (sender as! ArticleCellViewModel).captionInfo
-//            newsDetailVC?.detailNewsImageUrl = (sender as! ArticleCellViewModel).imageUrl
+            //            let articleDetailVC = segue.destination as? ArticlesWebKitViewController
             
         }
     }
+    
 }
+
+

@@ -56,4 +56,5 @@ class ArticleTableViewCell: UITableViewCell {
         self.dateLabel?.textColor   = API.SecondryTextColor
         self.articleImageView.layer.cornerRadius = 10
     }
+    
 }
