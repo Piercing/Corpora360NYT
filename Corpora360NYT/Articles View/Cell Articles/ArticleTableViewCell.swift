@@ -41,7 +41,7 @@ class ArticleTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+                
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,7 +54,13 @@ class ArticleTableViewCell: UITableViewCell {
         self.titleLabel?.textColor  = API.PrimaryTextColor
         self.authorLabel?.textColor = API.SecondryTextColor
         self.dateLabel?.textColor   = API.SecondryTextColor
-        self.articleImageView.layer.cornerRadius = 10
+        
+        articleImageView.layer.cornerRadius   = 45
+        articleImageView.layer.masksToBounds  = true
+        articleImageView.clipsToBounds        = true
+        articleImageView.layer.masksToBounds  = true
+        articleImageView.contentMode          = .scaleAspectFill
+
     }
     
 }

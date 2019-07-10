@@ -72,7 +72,6 @@ struct API {
             
         case "facebook":
             API.ArtApiURL = "/\(API.getArticleType)" + "/\(API.Section)" + "/\(API.Facebook)" + "/\(API.getPeriodType)" + ".json?api-key=\(API.APIKey)"
-            print(API.getArticleType)
             return API.BaseURL + API.ArtApiURL
             
         case "twitter":

@@ -22,8 +22,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Settings".localize
+     
         setupTableView()
         
     }
@@ -31,6 +30,9 @@ class SettingsViewController: UIViewController {
     // MARK: - View Methods
     
     private func setupTableView() {
+        title = "Settings".localize
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.font: UIFont(name: "Avenir-Medium", size: 25)!]
         settingsTableView.separatorInset = UIEdgeInsets.zero
         settingsTableView.allowsMultipleSelection = true
         showArticles.layer.cornerRadius = 12
@@ -44,6 +46,8 @@ class SettingsViewController: UIViewController {
     }
     
 }
+
+// MARK: - Extensions
 
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     

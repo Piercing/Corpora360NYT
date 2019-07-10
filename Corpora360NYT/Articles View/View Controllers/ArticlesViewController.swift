@@ -100,13 +100,28 @@ extension ArticlesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "articleDetailSegue".localize, sender: self.dataSource.data.value[indexPath.row])
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "articleDetailSegue".localize {
-            //            let articleDetailVC = segue.destination as? ArticlesWebKitViewController
             
+            let articleDetailVC = segue.destination as? ArticlesWebKitViewController
+            articleDetailVC?.articleTitle = (sender as! ArticleCellViewModel).title
+            articleDetailVC?.urlArticle = (sender as! ArticleCellViewModel).urlArticle
         }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1.0
+        
     }
     
 }

@@ -28,6 +28,7 @@ extension Articles: Parsable {
 }
 
 struct Article {
+    var url: String?
     var title: String?
     var section: String?
     var imageUrl: String?
@@ -35,11 +36,11 @@ struct Article {
     var byLineString: String?
     
     init?(articleDictionary: Dictionary<String, Any>) {
-        guard let _ = articleDictionary["title"] as? String else { return nil }
         
+        self.url = articleDictionary["Url".localize] as? String
         self.title = articleDictionary["Title".localize] as? String
-        self.byLineString = articleDictionary["ByLine".localize] as? String
         self.section = articleDictionary["Section".localize] as? String
+        self.byLineString = articleDictionary["ByLine".localize] as? String
         
         if let dateString = articleDictionary["PublishedDate".localize] as? String {
             self.publishedData = Utils.convertDataToString(date: dateString)
