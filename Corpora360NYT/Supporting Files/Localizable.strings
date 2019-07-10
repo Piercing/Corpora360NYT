@@ -13,7 +13,6 @@
 "ByLine"        = "byline"; // author
 "Section"       = "section";
 "Results"       = "results";
-"Abstract"      = "abstract";
 "ShareType"     = "share_type";
 "PublishedDate" = "published_date";
 "MediaMetaData" = "media-metadata";
@@ -25,14 +24,18 @@
 "articleDetailSegue" = "articleDetailSegue";
 
 // Default constants
-"Settings"              = "Settings";
-"OkButtonTitle"         = "OK";
-"MostSharedArticles"    = "NY Times Most Shared";
-"MostViewedArticles"    = "NY Times Most Viewed";
-"MosteMailedArticles"   = "NY Times Most Emailed";
-"NetworkErrorMessage"   = "Network error occurred!. Please check your internet and try again.";
-"NoNetworkErrorMessgae" = "Internet is not availble. please check your internet setting and try again.";
-"APIParseErrorMessage"  = "An error occurred while processing response!. Please check your internet setting and try again later";
+"Facebook"               = "Facebook";
+"MostViewed"             = "mostviewed";
+"Seven"                  = "7";
+"Articles"               = "Articles";
+"Settings"               = "Settings";
+"OkButton"               = "OK";
+"ArticlesTitleTableView" = "NY Times Articles";
+"MostSharedArticles"     = "NY Times Most Shared";
+"MostViewedArticles"     = "NY Times Most Viewed";
+"MosteMailedArticles"    = "NY Times Most Emailed";
+"NetworkErrorMessage"    = "Network error occurred!.";
+"APIParseErrorMessage"   = "An error occurred while processing response!";
 
 
 
