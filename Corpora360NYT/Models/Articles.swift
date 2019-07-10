@@ -37,7 +37,7 @@ struct Article {
     
     init?(articleDictionary: Dictionary<String, Any>) {
         
-        self.url = articleDictionary["Url".localize] as? String
+        if let url = articleDictionary["Url".localize] as? String { self.url = url }
         self.title = articleDictionary["Title".localize] as? String
         self.section = articleDictionary["Section".localize] as? String
         self.byLineString = articleDictionary["ByLine".localize] as? String
