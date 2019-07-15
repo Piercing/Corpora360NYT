@@ -76,8 +76,6 @@ class ArticlesViewController: UIViewController {
                 Utils.isConnectedToNetWork() ?
                     self?.showAlert(message: "NoNetworkErrorMessage".localize) :
                     self?.showAlert(message: error.localizedDescription)
-                
-                self?.dismiss(animated: true, completion: nil)
             default:
                 print("Sucess")
             }
