@@ -36,8 +36,7 @@
 "MosteMailedArticles"    = "NY Times Most Emailed";
 "NetworkErrorMessage"    = "Network error occurred!.";
 "APIParseErrorMessage"   = "An error occurred while processing response!";
-
-
+"NoNetworkErrorMessage"  = "Internet is not availble. please check your internet setting and try again.";
 
 
 

@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import Reachability
 
 class Utils {
+    
     static func convertDataToString(date: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yy-MM-dd"
@@ -26,6 +28,10 @@ class Utils {
         let newDate = dateFormatter.string(from: date)
         return newDate
         
+    }
+    
+    static func isConnectedToNetWork() -> Bool {
+        return (Reachability()?.connection != .none)
     }
 
 }

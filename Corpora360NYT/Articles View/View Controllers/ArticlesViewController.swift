@@ -52,8 +52,12 @@ class ArticlesViewController: UIViewController {
             self?.articlesTableView.reloadData()
         }
         
-        // Get article
-        getArticle()
+        // Get article if network availble
+        Utils.isConnectedToNetWork() ? getArticle() : showAlert(message: "NoNetworkErrorMessage".localize)
+        
+        if Utils.isConnectedToNetWork() == false {
+            self.activiyIndicatorArticles.removeFromSuperview()
+        }
         
     }
     
@@ -66,9 +70,14 @@ class ArticlesViewController: UIViewController {
             self?.activiyIndicatorArticles?.removeFromSuperview()
             
             switch result{
-            case .failure(let error):
-                self?.showAlert(message: error.localizedDescription)
                 
+            case .failure(let error):
+                
+                Utils.isConnectedToNetWork() ?
+                    self?.showAlert(message: "NoNetworkErrorMessage".localize) :
+                    self?.showAlert(message: error.localizedDescription)
+                
+                self?.dismiss(animated: true, completion: nil)
             default:
                 print("Sucess")
             }
@@ -81,15 +90,27 @@ class ArticlesViewController: UIViewController {
     
     func showAlert(message:String) {
         
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
         
-        let when = DispatchTime.now() + 3
-        DispatchQueue.main.asyncAfter(deadline: when){
-            alert.dismiss(animated: true, completion: {
-                self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
-            })
-        }
+        let alertView = UIAlertController(title: title,
+                                          message: message,
+                                          preferredStyle: .alert)
+        let action = UIAlertAction(title: "OkButton".localize, style: .default, handler: { (_) -> Void in
+            self.performSegueToReturnBack()
+        })
+        alertView.addAction(action)
+        self.present(alertView, animated: true, completion: nil)
+        
+//        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+//        self.present(alert, animated: true, completion: {
+//            self.navigationController?.popToViewController(SettingsViewController(), animated: true)
+//        })
+        
+//        let when = DispatchTime.now() + 3
+//        DispatchQueue.main.asyncAfter(deadline: when){
+//            alert.dismiss(animated: true, completion: {
+//                self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+//            })
+//        }
     }
     
 }
@@ -125,5 +146,3 @@ extension ArticlesViewController: UITableViewDelegate {
     }
     
 }
-
-

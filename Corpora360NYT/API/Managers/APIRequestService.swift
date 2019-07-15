@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Reachability
 
 class APIRequestService {
     
@@ -17,7 +18,11 @@ class APIRequestService {
             return nil
         }
         
-        let apiRequest = APIRequest.apiRequest(method: .GET, url: url)
+        var apiRequest = APIRequest.apiRequest(method: .GET, url: url)
+        
+        if let reachability = Reachability(), reachability.connection == .none {
+            apiRequest.cachePolicy = .returnCacheDataDontLoad
+        }
         
         let task = session.dataTask(with: apiRequest) { (data, response, error) in
             if let error = error {

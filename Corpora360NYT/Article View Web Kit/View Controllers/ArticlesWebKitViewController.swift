@@ -19,7 +19,6 @@ class ArticlesWebKitViewController: UIViewController {
     var popupWebView: WKWebView?
     var articleTitle: String?
     var urlArticle: String?
-    var activityIndicator: UIActivityIndicatorView!
     
     private var loadingObservation: NSKeyValueObservation?
     
@@ -81,8 +80,9 @@ class ArticlesWebKitViewController: UIViewController {
             if new && !old {
                 strongSelf.view.addSubview(strongSelf.loadingIndicator)
                 strongSelf.loadingIndicator.startAnimating()
-                NSLayoutConstraint.activate([strongSelf.loadingIndicator.centerXAnchor.constraint(equalTo: strongSelf.view.centerXAnchor),
-                                             strongSelf.loadingIndicator.centerYAnchor.constraint(equalTo: strongSelf.view.centerYAnchor)])
+                
+                NSLayoutConstraint.activate([strongSelf.loadingIndicator.centerXAnchor.constraint(equalTo: strongSelf.view.centerXAnchor), strongSelf.loadingIndicator.centerYAnchor.constraint(equalTo: strongSelf.view.centerYAnchor)])
+                
                 strongSelf.view.bringSubviewToFront(strongSelf.loadingIndicator)
             }
             else if !new && old {

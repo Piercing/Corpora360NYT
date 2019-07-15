@@ -7,5 +7,6 @@ target 'Corpora360NYT' do
 
   # Pods for Corpora360NYT
     pod 'SDWebImage', '~> 4.0'
+    pod 'ReachabilitySwift'
 
 end
